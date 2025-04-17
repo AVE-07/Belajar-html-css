@@ -1,0 +1,94 @@
+body{
+    /*buat tingginya jadi responsive ama browser*/
+    min-height: 100dvh;
+    /*biar responsive ikutin alur konten*/
+    width: auto;
+    /*gaya font tulisannya*/
+    font-family: Arial, Helvetica, sans-serif;
+    /*font colornya*/
+    color: black;
+}
+
+nav{
+    /*buat navbarnya dariawal ada di atas*/
+    top: 0;
+    /*scroll ampe inti bumi ngikut terus*/
+    position: sticky;
+    /*buat pencegahan biar kgk ketiban*/
+    z-index: 999;
+    /*warna background*/
+    background-color: greenyellow;
+    /*ini biar ada efek animasi bayangan sederhana*/
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /*perubahan property secara pelan tapi pasti*/
+    transition: all 0.3 ease;
+    /*jarak ama border*/
+    padding: 5px;
+}
+
+ul{
+    /*ngebuat kgk pake simbol urutan*/
+    list-style-type: none;
+    /*babang flexbox nih boss*/
+    display: flex;
+    /*babang direction berkata row nah belakangnya si wrap dia mode inline*/
+    flex-flow: row nowrap;
+    /*ini ngebuat jarak antar item di, posisi x karna row*/
+    justify-content: space-evenly;
+    /*ini buat item keteangah, posisi y karna row*/
+    align-items: center;
+    /*ini buat dia pake jarak antara atas bawah*/
+    align-content: space-evenly;
+}
+
+li{
+    /*buat bikin bordernya*/
+    border: 1px solid black;
+    /*jarak konten ke border*/
+    padding: 10px;
+    /*buat bikin jarak antar item*/
+    gap: 10px
+}
+li a{
+    /*ngebuat link kagak pake underscore*/
+    text-decoration: none;
+}
+
+a:hover{
+    /*kalo cursor mendekat dia bakal berubah warna*/
+    background-color: black;
+}
+
+/*pake order supaya berurutan tanpa perlu peduli siapa duluan di tulis*/
+li.no1{
+    order: 2;
+    flex: 1 1 100px;
+}
+
+li.no2{
+    order: 3;
+    flex: 1 2 100px;
+}
+
+/*pake align self tapi gagal karna cuma satu baris*/
+li.special{
+    order: 1;
+    flex: 1 1 100px;
+    align-content: flex-start;
+}
+
+div{
+    /*ngebuat teks ke tengah*/
+    text-align: center;
+    /*ngebuat jarak antar konten*/
+    margin: 20px;
+    /*jarak ama pembatasnya*/
+    padding: 10px;
+}
+
+footer{
+    /*kasih jarak lah ama pembatasnya*/
+    padding: 10px;
+    /*teks ketengah*/
+    text-align: center;
+}
